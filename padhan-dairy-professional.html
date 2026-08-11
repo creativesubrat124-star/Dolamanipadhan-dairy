@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Padhan Dairy | Pure. Fresh. Trusted.</title>
+<meta name="description" content="Padhan Dairy - Fresh milk and paneer.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#08783f;--dark:#064f2d;--blue:#1766a8;--cream:#fffdf6;--gold:#e8b63d;--text:#173326}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--text);line-height:1.5}
+a{text-decoration:none;color:inherit}
+.nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #ddd;display:flex;align-items:center;justify-content:space-between;padding:12px 5%;gap:20px}
+.logo{background:var(--green);color:#fff;border-radius:0 0 35px 35px;padding:10px 24px;font-weight:900;font-size:24px;letter-spacing:1px}
+.logo small{display:block;text-align:center;font-size:11px;letter-spacing:3px}
+.navlinks{display:flex;gap:25px;font-weight:700;font-size:14px}
+.contact{font-weight:800;color:var(--dark);font-size:14px}
+.hero{min-height:470px;position:relative;overflow:hidden;background:linear-gradient(110deg,#e9f6e7 0%,#fff 48%,#edf8ee 100%);display:flex;align-items:center}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 65%,#b9ddb1 0 7%,transparent 8%),linear-gradient(165deg,transparent 65%,#d6ecd0 66% 100%);opacity:.8}
+.hero-inner{position:relative;z-index:2;width:90%;max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:20px}
+.cowphoto{width:100%;height:320px;object-fit:cover;border-radius:20px;box-shadow:0 18px 45px #0002}
+.script{font-family:cursive;color:var(--green);font-size:25px}
+.hero h1{font-size:62px;line-height:.95;color:var(--green);letter-spacing:2px;margin:10px 0}
+.hero h1 span{color:#174e8c}
+.tag{font-size:20px;margin-bottom:20px}
+.btn{display:inline-block;padding:13px 22px;border-radius:30px;background:#18a94c;color:#fff;font-weight:800;box-shadow:0 8px 18px #08783f33}
+.features{width:88%;max-width:1100px;margin:-35px auto 35px;position:relative;z-index:5;background:#fff;border-radius:15px;box-shadow:0 8px 25px #0002;display:grid;grid-template-columns:repeat(4,1fr);padding:20px}
+.feature{text-align:center;padding:5px 15px;border-right:1px solid #ddd;font-weight:700}.feature:last-child{border:0}.feature b{display:block;color:var(--green);font-size:18px}
+.section{width:92%;max-width:1200px;margin:45px auto}.title{text-align:center;color:var(--dark);font-size:32px;margin-bottom:25px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border:1px solid #ddd;border-radius:12px;padding:20px;text-align:center;box-shadow:0 5px 18px #0001}
+.card h3{color:var(--dark);font-size:20px;margin-bottom:10px}
+.pack{height:230px;display:flex;align-items:center;justify-content:center;position:relative;margin:5px auto 15px}
+.pouch{width:145px;height:190px;background:linear-gradient(150deg,#f8f8f8,#e8eee8);border-radius:8px 8px 15px 15px;box-shadow:0 9px 12px #0002;position:relative;overflow:hidden;border:1px solid #ccc;transform:perspective(500px) rotateY(-5deg)}
+.pouch:before{content:"";position:absolute;left:0;right:0;top:38px;height:100px;background:var(--green)}
+.pouch.blue:before{background:var(--blue)}
+.pouch:after{content:"";position:absolute;left:15px;right:15px;top:45px;height:2px;background:#fff5;box-shadow:0 82px #fff5}
+.brand{position:absolute;z-index:2;top:53px;left:0;right:0;color:#fff;font-weight:900;font-size:19px;letter-spacing:.5px}
+.brand small{display:block;font-size:9px;letter-spacing:2px}
+.pouch .milk{position:absolute;z-index:2;top:91px;left:0;right:0;color:#fff;font-size:12px;font-weight:800}
+.pouch .price{position:absolute;z-index:3;top:7px;right:8px;background:#fff;border-radius:50%;padding:5px;font-weight:900;font-size:11px;color:var(--green)}
+.pouch .splash{position:absolute;bottom:18px;left:25px;right:25px;height:28px;background:#fff;border-radius:50% 50% 35% 35%;opacity:.9}
+.carton{width:125px;height:190px;background:linear-gradient(90deg,#f7f7f2,#fff);border:1px solid #bbb;border-radius:6px;position:relative;box-shadow:8px 9px 12px #0002;overflow:hidden}
+.carton .top{height:30px;background:#ddd;clip-path:polygon(0 0,100% 0,83% 100%,17% 100%)}
+.carton .band{background:#1766a8;color:#fff;padding:12px 4px;font-weight:900;font-size:18px}
+.carton p{font-size:10px;font-weight:800;margin:8px}.cowmark{font-size:35px;margin-top:8px}
+.paneerbox{width:245px;height:150px;border-radius:8px;background:linear-gradient(135deg,#fff,#f1f5ea);border:1px solid #ccc;box-shadow:8px 10px 15px #0002;position:relative;padding:18px;text-align:left}
+.paneerbox .pband{background:var(--green);color:#fff;padding:10px;font-weight:900;font-size:20px}.paneerbox p{font-weight:800;font-size:13px;margin-top:9px}.cubes{position:absolute;right:13px;bottom:15px;font-size:38px}
+.info{background:#eef8e9;border:1px solid #c9e1c4;border-radius:15px;padding:25px;display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.info h3{color:var(--dark);margin-bottom:8px}.retail{background:linear-gradient(90deg,#f0f8e9,#fff);border-radius:15px;padding:30px;text-align:center}
+.retailgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:20px}.retailgrid div{padding:15px;background:#fff;border-radius:10px;font-weight:800}
+.footer{background:#04572f;color:#fff;padding:40px 6%;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.footer h3{margin-bottom:10px}.footer p{margin:5px 0}.copy{background:#fff;text-align:center;padding:8px;font-size:12px}
+@media(max-width:800px){.navlinks{display:none}.hero-inner{grid-template-columns:1fr;text-align:center;padding:35px 0}.hero h1{font-size:48px}.cowphoto{height:220px}.features{grid-template-columns:1fr 1fr}.feature{border:0;border-bottom:1px solid #ddd}.products{grid-template-columns:1fr 1fr}.info{grid-template-columns:1fr}.retailgrid{grid-template-columns:1fr 1fr}.footer{grid-template-columns:1fr}}
+@media(max-width:480px){.products{grid-template-columns:1fr}.hero h1{font-size:40px}.features{grid-template-columns:1fr}.retailgrid{grid-template-columns:1fr}.logo{font-size:20px}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <a class="logo" href="#">Padhan<small>DAIRY</small></a>
+  <nav class="navlinks">
+    <a href="#home">Home</a><a href="#products">Our Products</a><a href="#retailers">For Retailers</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="contact">☎ +91 6372825362</div>
+</header>
+
+<section class="hero" id="home">
+ <div class="hero-inner">
+   <img class="cowphoto" src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&w=900&q=85" alt="Dairy cow in a green field">
+   <div>
+    <div class="script">Pure by Nature</div>
+    <h1>PADHAN<br><span>DAIRY</span></h1>
+    <p class="tag">Pure. Fresh. Trusted.</p>
+    <a class="btn" href="https://wa.me/916372825362?text=Hello%20Padhan%20Dairy%2C%20I%20want%20to%20order%20milk%2Fpaneer.">● Order / Enquiry on WhatsApp</a>
+   </div>
+ </div>
+</section>
+
+<div class="features">
+ <div class="feature"><b>100% Fresh</b>Pure Cow Milk</div>
+ <div class="feature"><b>Hygienic</b>Carefully Processed</div>
+ <div class="feature"><b>Natural</b>Fresh Goodness</div>
+ <div class="feature"><b>Trusted</b>Local Dairy</div>
+</div>
+
+<section class="section" id="products">
+ <h2 class="title">OUR PRODUCTS</h2>
+ <div class="products">
+
+  <article class="card">
+   <h3>₹10 MILK</h3>
+   <div class="pack"><div class="pouch"><div class="price">₹10</div><div class="brand">Padhan<small>DAIRY</small></div><div class="milk">TONED MILK</div><div class="splash"></div></div></div>
+   <p><b>PURE • FRESH • HEALTHY</b><br>200 ml</p><br>
+   <a class="btn" href="https://wa.me/916372825362?text=I%20want%20the%20Rs%2010%20Padhan%20Dairy%20milk.">WhatsApp Order</a>
+  </article>
+
+  <article class="card">
+   <h3>₹20 MILK</h3>
+   <div class="pack"><div class="pouch blue"><div class="price">₹20</div><div class="brand">Padhan<small>DAIRY</small></div><div class="milk">TONED MILK</div><div class="splash"></div></div></div>
+   <p><b>PURE • FRESH • HEALTHY</b><br>500 ml</p><br>
+   <a class="btn" href="https://wa.me/916372825362?text=I%20want%20the%20Rs%2020%20Padhan%20Dairy%20milk.">WhatsApp Order</a>
+  </article>
+
+  <article class="card">
+   <h3>1 LITRE MILK</h3>
+   <div class="pack"><div class="carton"><div class="top"></div><div class="band">Padhan<br><small>DAIRY</small></div><p>FRESH & PURE<br>COW MILK</p><div class="cowmark">🐄</div></div></div>
+   <p><b>FRESH • PURE • NUTRITIOUS</b><br>1 Litre</p><br>
+   <a class="btn" href="https://wa.me/916372825362?text=I%20want%201%20Litre%20Padhan%20Dairy%20milk.">WhatsApp Order</a>
+  </article>
+
+  <article class="card">
+   <h3>5 LITRE MILK</h3>
+   <div class="pack"><div class="pouch"><div class="brand">Padhan<small>DAIRY</small></div><div class="milk">FRESH & PURE<br>COW MILK</div><div class="splash"></div></div></div>
+   <p><b>FRESH • PURE • NUTRITIOUS</b><br>5 Litre</p><br>
+   <a class="btn" href="https://wa.me/916372825362?text=I%20want%205%20Litre%20Padhan%20Dairy%20milk.">WhatsApp Order</a>
+  </article>
+
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="info">
+  <div>
+   <h3>PADHAN DAIRY — FRESH PANEER</h3>
+   <p>Soft, fresh and made for everyday meals. A clean, premium-style product presentation for your dairy brand.</p>
+  </div>
+  <div class="pack"><div class="paneerbox"><div class="pband">Padhan DAIRY</div><b>FRESH PANEER</b><p>SOFT & FRESH<br>Net Weight: 200 g</p><div class="cubes">▦</div></div></div>
+ </div>
+</section>
+
+<section class="section" id="retailers">
+ <div class="retail">
+  <h2 class="title">FOR RETAILERS & SHOPS</h2>
+  <p>Bulk supply for shops, hotels, restaurants, tea stalls, sweet shops and more.</p>
+  <div class="retailgrid">
+   <div>🚚 Regular Supply</div><div>₹ Best Wholesale</div><div>📦 Fresh Packaging</div><div>💬 WhatsApp Enquiry</div>
+  </div>
+  <br><a class="btn" href="https://wa.me/916372825362?text=Hello%20Padhan%20Dairy%2C%20I%20am%20a%20retailer%20and%20want%20bulk%20supply.">Retailer Enquiry</a>
+ </div>
+</section>
+
+<footer class="footer" id="contact">
+ <div><h3>CONTACT US</h3><p>☎ +91 6372825362</p><p>WhatsApp: +91 6372825362</p><p>📍 Podajhalanga, Hemgir, Sundargarh, Odisha</p></div>
+ <div><h3>QUICK LINKS</h3><p><a href="#home">Home</a></p><p><a href="#products">Our Products</a></p><p><a href="#retailers">For Retailers</a></p><p><a href="#about">About Us</a></p></div>
+ <div><h3>FIND US</h3><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Podajhalanga%2C%20Hemgir%2C%20Sundargarh%2C%20Odisha">📍 Open in Google Maps</a></div>
+</footer>
+<div class="copy">© 2026 Padhan Dairy. All Rights Reserved.</div>
+
+</body>
+</html>
